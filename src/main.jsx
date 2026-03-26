@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import ProjectsProvider from "./context/ProjectsProvider.jsx"; // تأكد من المسار
-import { HashRouter as Router } from "react-router-dom"; // استخدم الـ HashRouter
+import ProjectsProvider from "./Context/ProjectsProvider.jsx";
+import { HashRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 
