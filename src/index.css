@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --box-color: rgb(24, 24, 24);
+  --p-color: #ccc;
+  --main-color: #0a0a0a;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --second-color: #ff942a;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--main-color);
+}

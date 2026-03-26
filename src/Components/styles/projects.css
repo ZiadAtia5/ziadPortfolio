@@ -1,0 +1,149 @@
+.projects-section {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.projects-swiper {
+  height: 100%;
+}
+.head-p {
+  color: #fff;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  width: 90%;
+  max-width: 1000px;
+  height: 550px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  perspective: 1000px; /* ضروري لتأثير 3D */
+  transition: transform 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project .first-video {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+}
+.project .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.project .project-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 93%;
+  height: 93%;
+  z-index: 3;
+  border-radius: 20px;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.project:hover .project-content {
+  width: 87%;
+  height: 87%;
+}
+
+.project .p-text-box {
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.project .project-info {
+  width: 100%;
+  padding: 15px;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #05050591;
+}
+
+.project .project-info .ca-box span {
+  background-color: #000000;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 12px;
+  margin-right: 5px;
+}
+
+.project .second-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.project-info h2 {
+  font-size: 20px;
+}
+
+.p-text-box p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.live-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #00ff88, #00ccff);
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.live-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 255, 136, 0.6);
+}
+
+/* 3D hover effect على الفيديو */
+.project:hover video {
+  transform: rotateY(5deg) rotateX(3deg) scale(1.02);
+}

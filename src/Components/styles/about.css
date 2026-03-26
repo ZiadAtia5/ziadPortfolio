@@ -1,0 +1,182 @@
+.about {
+  padding: 130px 0;
+  color: #fff;
+  height: fit-content;
+}
+
+.a-header {
+  text-align: center;
+  margin-bottom: 90px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 100px 0;
+  }
+  .a-header {
+    margin-bottom: 45px;
+  }
+}
+
+.a-header h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.a-header .line {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #fff;
+  margin: 15px auto 0;
+}
+
+.about .content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about .content {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.about .left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-img {
+  width: 50%;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    width: 80%;
+    height: 300px;
+  }
+}
+
+.about .right {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .about .right {
+    width: 100%;
+  }
+}
+
+.about .right h3 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .about .right h3 {
+    font-size: 28px;
+  }
+}
+
+.about .right p {
+  color: var(--p-color);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.info {
+  margin-bottom: 30px;
+}
+
+/* .info div {
+  margin-bottom: 10px;
+} */
+
+.info-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.resume {
+  padding: 15px 30px;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .resume {
+    padding: 10px 20px;
+    display: inline-block;
+  }
+}
+
+.resume:hover {
+  transform: scale(1.1);
+}
+
+.counter {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .counter {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.counter .count {
+  font-size: 30px;
+  font-weight: 700;
+  background-color: var(--box-color);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 16px 24px 20px 8px,
+    rgba(184, 180, 180, 0.08) 0px 2px 0px 0px inset;
+}
+
+@media (max-width: 768px) {
+  .counter .count {
+    font-size: 28px;
+  }
+}
+
+.counter .count:hover {
+  transform: scale(1.1);
+}
+
+.counter .count h4 {
+  font-size: 22px;
+  margin-top: 10px;
+}
+.counter .count span {
+  margin-left: 5px;
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Fit Fuel",
+    "category": "Sport website",
+    "progress": "completed",
+    "video": "https://drive.google.com/file/d/1744wbCuYBM5dDuZEV4PvALIsGCUTDXxJ/view?usp=drive_link",
+    "live": "https://ziadatia5.github.io/Fit-Fuel/",
+    "teachnolgy": ["React", "Js", "Firebase"]
+  },
+
+  {
+    "id": 2,
+    "name": "Mahmoud Portfolio",
+    "category": "portfolio",
+    "progress": "completed",
+    "video": "src/videos/PortfolioMahmoud .mp4",
+    "live": "https://mahmoud-portfolio-mu.vercel.app/",
+    "teachnolgy": ["React", "Js", "Firebase"]
+  },
+  {
+    "id": 3,
+    "name": "Ziad Portfolio",
+    "category": "portfolio",
+    "progress": "completed",
+    "video": "src/videos/ziadAtia.mp4",
+    "live": "https://mahmoud-portfolio-mu.vercel.app/",
+    "teachnolgy": ["React", "Js", "Firebase"]
+  }
+]
