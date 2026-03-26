@@ -17,54 +17,54 @@ const Skills = () => {
   const skills1 = [
     {
       name: "Html",
-      image: "src/Images/icons/html.png",
+      image: "https://i.postimg.cc/PrYBtyRD/html.png",
       progress: "98%",
     },
     {
       name: "css",
-      image: "src/Images/icons/css.png",
+      image: "https://i.postimg.cc/QNR2Gw0b/css.png",
       progress: "99%",
     },
     {
       name: "js",
-      image: "src/Images/icons/js.png",
+      image: "https://i.postimg.cc/NfmWgDzT/js.png",
       progress: "95%",
     },
     {
       name: "react",
-      image: "src/Images/icons/react.png",
+      image: "https://i.postimg.cc/X7dTVLzw/react.png",
       progress: "90%",
     },
     {
       name: "vite",
-      image: "src/Images/icons/vite.png",
+      image: "https://i.postimg.cc/NfmWgDz6/vite.png",
       progress: "98%",
     },
     {
       name: "bootstrap",
-      image: "src/Images/icons/bootstrap.png",
+      image: "https://i.postimg.cc/Vs3xQpDW/bootstrap.png",
       progress: "95%",
     },
     {
       name: "firebase",
-      image: "src/Images/icons/fireBase.png",
+      image: "https://i.postimg.cc/bYK7cW3H/fire_Base.png",
       progress: "95%",
     },
     {
       name: "git",
-      image: "src/Images/icons/git.png",
+      image: "https://i.postimg.cc/SQwBF3DV/git.png",
       progress: "90%",
     },
     {
       name: "github",
-      image: "src/Images/icons/github.png",
+      image: "https://i.postimg.cc/VLn3YgVC/github.png",
       progress: "90%",
     },
 
     {
       name: "api",
-      image: "src/Images/icons/api.png",
-      progress: "80%",
+      image: "https://i.postimg.cc/3rPs5Vnj/api.png",
+      progress: "95%",
     },
   ];
 

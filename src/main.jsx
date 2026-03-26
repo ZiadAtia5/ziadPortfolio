@@ -1,16 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import ProjectsProvider from "../src/context/ProjectsProvider.jsx";
-import { BrowserRouter as Router } from "react-router-dom";
+import ProjectsProvider from "./context/ProjectsProvider.jsx"; // تأكد من المسار
+import { HashRouter as Router } from "react-router-dom"; // استخدم الـ HashRouter
 import "./index.css";
 import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <Router>
-    <StrictMode>
+  <StrictMode>
+    <Router>
       <ProjectsProvider>
         <App />
       </ProjectsProvider>
-    </StrictMode>
-  </Router>,
+    </Router>
+  </StrictMode>,
 );

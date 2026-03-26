@@ -45,7 +45,6 @@ function App() {
             <Landing />
           </section>
 
-          <UploadProjectData />
           <section id="about">
             <About />
           </section>
