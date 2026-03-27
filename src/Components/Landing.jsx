@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { HashLink } from "react-router-hash-link";
 
 import "./styles/landing.css";
 
@@ -13,12 +14,14 @@ const Landing = () => {
             front-End Web Developer specializing in building high-converting,
             performance-driven websites that help businesses grow and scale.
           </p>
-          <div className="l-btn" data-aos="slide-up" data-aos-delay="200">
-            <p>contact me</p>
-            <div className="l-icon">
-              <FontAwesomeIcon className="l-i" icon={faArrowRight} />
+          <HashLink smooth to="/#contact">
+            <div className="l-btn" data-aos="slide-up" data-aos-delay="200">
+              <p>contact me</p>
+              <div className="l-icon">
+                <FontAwesomeIcon className="l-i" icon={faArrowRight} />
+              </div>
             </div>
-          </div>
+          </HashLink>
         </div>
         <h2>ziad</h2>
       </div>

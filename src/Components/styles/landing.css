@@ -17,7 +17,6 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  text-align: center;
   color: #fff;
   text-align: start;
 }
@@ -25,6 +24,7 @@
 @media (max-width: 768px) {
   .landing .text-box {
     width: 80%;
+    top: 43%;
   }
   .landing {
     background-image: url("../../Images/iphone-landing.png");
@@ -68,6 +68,11 @@
   background-color: #00000033;
   cursor: pointer;
   overflow: hidden;
+}
+
+.landing a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .landing .l-btn p {
