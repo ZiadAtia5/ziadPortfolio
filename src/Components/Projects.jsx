@@ -12,8 +12,9 @@ export default function Projects() {
   const { projects, loading } = useProjects();
   const swiperRef = useRef(null);
 
-  // Timer للسكрол بدل boolean
   const scrollTimer = useRef(null);
+  const lastTouchY = useRef(0);
+  const isTouching = useRef(false);
 
   if (loading) {
     return <h2 style={{ textAlign: "center" }}>Loading...</h2>;
@@ -27,27 +28,61 @@ export default function Projects() {
 
     const delta = e.deltaY;
 
-    // نزول
-    if (delta > 40) {
-      if (swiper.isEnd) {
-        scrollTimer.current = setTimeout(() => {
-          document
-            .getElementById("contact")
-            ?.scrollIntoView({ behavior: "smooth" });
-        }, 300);
-      }
+    if (delta > 40 && swiper.isEnd) {
+      scrollTimer.current = setTimeout(() => {
+        document
+          .getElementById("contact")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
     }
 
-    // صعود
-    if (delta < -40) {
-      if (swiper.isBeginning) {
-        scrollTimer.current = setTimeout(() => {
-          document
-            .getElementById("skills")
-            ?.scrollIntoView({ behavior: "smooth" });
-        }, 300);
-      }
+    if (delta < -40 && swiper.isBeginning) {
+      scrollTimer.current = setTimeout(() => {
+        document
+          .getElementById("skills")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
     }
+  };
+
+  const handleTouchMove = (e) => {
+    const swiper = swiperRef.current;
+    if (!swiper) return;
+
+    const touchY = e.touches[0].clientY;
+    const delta = lastTouchY.current - touchY;
+
+    if (!isTouching.current) return;
+    lastTouchY.current = touchY;
+
+    if (scrollTimer.current) clearTimeout(scrollTimer.current);
+
+    if (delta > 30 && swiper.isEnd) {
+      // swipe up
+      scrollTimer.current = setTimeout(() => {
+        document
+          .getElementById("contact")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+    }
+
+    if (delta < -30 && swiper.isBeginning) {
+      // swipe down
+      scrollTimer.current = setTimeout(() => {
+        document
+          .getElementById("skills")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+    }
+  };
+
+  const handleTouchStart = (e) => {
+    lastTouchY.current = e.touches[0].clientY;
+    isTouching.current = true;
+  };
+
+  const handleTouchEnd = () => {
+    isTouching.current = false;
   };
 
   return (
@@ -57,6 +92,9 @@ export default function Projects() {
         e.stopPropagation();
         handleWheel(e);
       }}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <div className="a-header">
         <h2 className="head-p">projects</h2>
@@ -68,12 +106,12 @@ export default function Projects() {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           direction="vertical"
           slidesPerView={1}
-          speed={500} // أسرع شوية للسلاسة
+          speed={500}
           grabCursor={true}
           mousewheel={{
             sensitivity: 0.7,
             thresholdDelta: 50,
-            releaseOnEdges: true, // يسمح بالسكрол بعد آخر/أول سلايد
+            releaseOnEdges: true,
           }}
           touchRatio={1.2}
           resistanceRatio={0.6}
